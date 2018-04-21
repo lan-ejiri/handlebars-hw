@@ -22,12 +22,6 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controllers.js");
 app.use(routes);
 
-var orm = require("./config/orm.js");
-
-// app.get("/", function(req, res) {
-//   res.render("index");
-// });
-
 //listening
 app.listen(PORT, function() {
   // Log (server-side) when our server has started
