@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row text-center">
+        <h1>Burger HW</h1>
+        <img src="/assets/img/burger.png">
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-5 burgercol">
+            <h2>non eaten burgers</h2>
+            <div class="noneatenburgers">
+                {{#each burger}} {{#unless devoured}}
+                <BR> {{burger_name}}
+
+                <button class="devour">
+                    Devour
+                </button>
+                <br> {{/unless}} {{/each}}
+            </div>
+        </div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-5 burgercol">
+            <h2>eaten burgers</h2>
+            <div class="eatenburgers">
+
+                {{#each burger}} {{#if devoured}}
+                <BR> {{burger_name}}
+
+                <button class="undevour">
+                    throw up?
+                </button>
+                <br> {{/if}} {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <br>
+        <form id="form">
+            <textarea name="message" rows="3" cols="30" id="burgerinput">
+                </textarea>
+            <br>
+            <input type="submit" id='submit'>
+        </form>
+        <br>
+        <p1>Enter a burger you want to eat and click the submit button</p1>
+    </div>
+
+</div>
+
+</div>

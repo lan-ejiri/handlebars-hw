@@ -1,0 +1,13 @@
+body {
+background: url("https://www.toptal.com/designers/subtlepatterns/patterns/circles-dark.png");
+}
+
+h1 {
+  color: blue;
+}
+
+.burgercol {
+   /* background-color: rgba(255, 0, 0, 0.2); */
+
+   border: solid red 2px;
+}
