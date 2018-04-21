@@ -7,8 +7,7 @@ var orm = {
       if (err) {
         throw err;
       }
-      // console.log("all selected", data);
-      // return data;
+     
       cb(data);
     });
   },
@@ -44,5 +43,6 @@ var orm = {
     );
   }
 };
+
 
 module.exports = orm;
