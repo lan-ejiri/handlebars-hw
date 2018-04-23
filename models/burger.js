@@ -12,8 +12,8 @@ var burger = {
       cb(res);
     });
   },
-  update: function(objColVals, condition, cb) {
-    orm.update("burger", objColVals, condition, function(res) {
+  update: function(idvalue, trueorfalse, cb) {
+    orm.updateOne(idvalue, trueorfalse, function(res) {
       cb(res);
     });
   }

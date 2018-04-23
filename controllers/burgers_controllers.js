@@ -3,8 +3,8 @@ var orm = require("../config/orm.js");
 var router = express.Router();
 var burger = require("../models/burger.js");
 
-router.get("/", function(req, res) {
-  burger.all(function(data) {
+router.get("/", function (req, res) {
+  burger.all(function (data) {
     var hbsObject = {
       burger: data
     };
@@ -12,8 +12,8 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/", function(req, res) {
-  burger.create(req.body.name, function(
+router.post("/", function (req, res) {
+  burger.create(req.body.name, function (
     result
   ) {
     // Send back the ID of the new quote
@@ -21,8 +21,10 @@ router.post("/", function(req, res) {
   });
 });
 
-// router.put("/", function(req, res) {
-
-// });
+router.put("/", function (req, res) {
+  burger.update(req.body.id, req.body.choice, function (result) {
+    res.json({ id: result.insertId });
+  })
+});
 
 module.exports = router;

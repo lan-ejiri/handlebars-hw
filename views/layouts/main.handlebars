@@ -33,16 +33,50 @@
                     location.reload();
                 }
             );
-       })
+        })
 
         //upon clicking devour
         $(".devour").on('click', function () {
-            alert("cilcked");
+
+            var getEaten = {
+                id: $(this).attr('id'),
+                choice: 1
+            };
+
+            $.ajax("/", {
+                type: "PUT",
+                data: getEaten
+            }).then(
+                function () {
+
+                    // Reload the page to get the updated list
+                    location.reload();
+                }
+            );
+
+
+
+
         })
 
         //upon clicking undevour
-        $(".devour").on('click', function () {
-            alert("cilcked");
+        $(".undevour").on('click', function () {
+         
+            var getEaten = {
+                id: $(this).attr('id'),
+                choice: 0
+            };
+
+            $.ajax("/", {
+                type: "PUT",
+                data: getEaten
+            }).then(
+                function () {
+
+                    // Reload the page to get the updated list
+                    location.reload();
+                }
+            );
         })
 
 

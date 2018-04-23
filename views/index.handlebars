@@ -8,9 +8,9 @@
             <h2>non eaten burgers</h2>
             <div class="noneatenburgers">
                 {{#each burger}} {{#unless devoured}}
-                <BR> {{burger_name}}
+                <BR> {{burger_name}} 
 
-                <button class="devour">
+                <button class="devour" id= {{id}} >
                     Devour
                 </button>
                 <br> {{/unless}} {{/each}}
@@ -24,7 +24,7 @@
                 {{#each burger}} {{#if devoured}}
                 <BR> {{burger_name}}
 
-                <button class="undevour">
+                <button class="undevour"  id= {{id}} >
                     throw up?
                 </button>
                 <br> {{/if}} {{/each}}

@@ -24,19 +24,15 @@ var orm = {
     );
   },
 
-  updateOne: function(id) {
+  updateOne: function(id, trueorfalse, cb) {
     connection.query(
-      "UPDATE burger SET devoured = 1 WHERE id = ?",
-      [id],
+      "UPDATE burger SET devoured = ? WHERE id = ?",
+      [trueorfalse, id],
       function(err, result) {
         if (err) {
           throw err;
-        } else if (result.changedRows === 0) {
-          console.log("a burger with that id does not exist");
         }
-        // res.status(200).end();
-        //cb(result_);
-        console.log(result);
+        cb(result);
       }
     );
   }
