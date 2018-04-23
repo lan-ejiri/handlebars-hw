@@ -1,11 +1,11 @@
 <div class="container">
-    <div class="row text-center">
+    <div class="row text-center burgerthing">
         <h1>Burger HW</h1>
-        <img src="/assets/img/burger.png">
+        <img id="burgpic"  src="/assets/img/burger.png">
     </div>
     <div class="row text-center">
         <div class="col-xs-5 burgercol">
-            <h2>non eaten burgers</h2>
+            <h2>Non eaten burgers</h2>
             <div class="noneatenburgers">
                 {{#each burger}} {{#unless devoured}}
                 <BR> {{burger_name}} 
@@ -18,7 +18,7 @@
         </div>
         <div class="col-xs-2"></div>
         <div class="col-xs-5 burgercol">
-            <h2>eaten burgers</h2>
+            <h2>Eaten burgers</h2>
             <div class="eatenburgers">
 
                 {{#each burger}} {{#if devoured}}
@@ -31,15 +31,16 @@
             </div>
         </div>
     </div>
-    <div class="row text-center">
+    <div class="row text-center something">
         <br>
+        <h3> Add your own!</h3>
         <form id="form">
             <input id="burgerinput" type="text">
-            <br>
+            <br><br>
             <input type="submit" id='submit'>
         </form>
         <br>
-        <p1>Enter a burger you want to eat and click the submit button</p1>
+        <h3>Enter a burger you want to eat and click the submit button</h3>
     </div>
 
 </div>

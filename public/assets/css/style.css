@@ -7,7 +7,54 @@ h1 {
 }
 
 .burgercol {
-   /* background-color: rgba(255, 0, 0, 0.2); */
+ background-color: rgba(0, 50, 225, 0.75); 
+ border-radius: 25px;
+ color: white;
 
-   border: solid red 2px;
+}
+
+form {
+  background-color: rgba(0, 50, 225, 0.75); 
+  border-radius: 25px;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: auto;
+  width: 50%;
+}
+
+#burgpic {
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 3px white solid;
+}
+
+.burgerthing {
+  margin-top: 5px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.1); 
+}
+
+.devour,.undevour,#submit {
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: blue;
+}
+
+.something {
+  background-color: rgba(0, 0, 0, 0.1);  
+  border-radius: 20px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.something h3 {
+color: blue;
+}
+
+#burgerinput {
+  color: black;
 }
